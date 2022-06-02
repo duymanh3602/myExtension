@@ -24,7 +24,7 @@
       "permissions": ["storage", "activeTab", "scripting", "geolocation"],
       "action": {
         "default_title": "Weather!",
-        "default_popup": "popup.html"
+        "default_popup": "menu.html"
       }
       
 }

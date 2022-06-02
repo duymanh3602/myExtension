@@ -1,0 +1,15 @@
+body {
+    height: auto;
+    width: auto;
+}
+button{
+    height: 35px;
+    width: 200px;
+    background-color: lightgrey;
+    border-style: double;
+    border-color: greenyellow;
+}
+
+button:hover {
+    background-color: grey;
+}
