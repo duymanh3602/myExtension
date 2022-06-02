@@ -1,21 +1,30 @@
 {
     "manifest_version": 3,
-    "name": "Weather Forecast",
+    "name": "Manh's Extension",
     "version": "1.0",
     "description": "My first Extension",
     "icons": {
         "16" : "/images/m_16.png",
         "128" : "/images/m_128.png"
     },
+    "background": {
+      "service_worker": "/js/background.js"
+    },
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; https://ajax.googleapis.com; object-src 'self';"
+    },
+
     "content_scripts": [
         {
-          "matches": ["https://*.com/*"],
+          "matches": ["*://*.com/*"],
           "css": ["/style/main.css"],
           "js": ["/js/main.js"]
         }
       ],
-      "permissions": ["storage"],
+      "permissions": ["storage", "activeTab", "scripting", "geolocation"],
       "action": {
+        "default_title": "Weather!",
         "default_popup": "popup.html"
       }
+      
 }
