@@ -5,6 +5,12 @@ $(document).ready(function () {
         return false;
     }
 
+    function audio() {
+        newwindow = window.open("audio.html", "Weather ForeCast", 'height=auto,width=auto');
+        if (window.focus) { newwindow.focus() }
+        return false;
+    }
+
     function closeweather() {
         newwindow.close();
     }
@@ -22,4 +28,5 @@ $(document).ready(function () {
     document.getElementById("about").addEventListener("click", about);
     document.getElementById("calc").addEventListener("click", calc);
     document.getElementById("screenshot").addEventListener("click", calc);
+    document.getElementById("audio").addEventListener("mouseover", audio);
 });
